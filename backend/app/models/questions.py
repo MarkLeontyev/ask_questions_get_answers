@@ -15,7 +15,6 @@ class Question(Base):
         DateTime, nullable=False, server_default=func.now()
     )
 
-    # One-to-many: Question -> Answers
     answers: Mapped[list["Answer"]] = relationship(
         back_populates="question", cascade="all, delete-orphan"
     )
