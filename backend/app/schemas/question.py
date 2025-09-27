@@ -22,7 +22,7 @@ class QuestionOut(QuestionBase):
 
 
 class QuestionWithAnswersOut(QuestionOut):
-    answers: list[AnswerOut] = []
+    answers: list[AnswerOut] = Field(default_factory=list)
 
     model_config = {
         "from_attributes": True,
