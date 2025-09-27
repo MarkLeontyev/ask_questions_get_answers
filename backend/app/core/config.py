@@ -7,7 +7,7 @@ load_dotenv()
 
 class Settings(BaseModel):
     database_url: str = os.getenv(
-        "DATABASE_URL", "sqlite:///./data.db"
+        "DATABASE_URL", "postgresql+psycopg://postgres:postgres@localhost:5432/app"
     )
 
 
