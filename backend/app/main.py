@@ -5,7 +5,6 @@ from .db.session import engine
 from .api.router import api_router
 from . import models  # noqa: F401
 
-# Создать таблицы при старте (для простоты без миграций)
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Answer Question API", version="1.0.0")
