@@ -3,7 +3,7 @@ from .core.config import settings
 from .db.base import Base
 from .db.session import engine
 from .api.router import api_router
-from . import models  # noqa: F401
+from . import models
 
 Base.metadata.create_all(bind=engine)
 
